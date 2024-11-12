@@ -50,8 +50,6 @@ public class MainActivity extends AppCompatActivity {
     // Declare a List of restaurants
     ArrayList<Restaurant> listOfRestaurants;
 
-    // TextView where we display the result on the screen
-    private TextView descriptionTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,7 +96,6 @@ public class MainActivity extends AppCompatActivity {
             JSONArray items = json.getJSONArray("restaurants");
 
             // Loop through the list in the json array
-            for (int i = 0; i < items.length(); i++){
 
                 //TODO (1): Extract the name and description
 
@@ -106,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
 
                 //TODO (3): Add the restaurant object to the lisat
 
-            }
+
         } catch (Exception e) {
             // Log the error
            Log.e(TAG, "Error reading JSON file: " + e.getMessage());

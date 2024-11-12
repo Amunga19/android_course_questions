@@ -3,15 +3,15 @@ package com.college.quiz1_question;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import com.college.quiz1_question.util.MyFileReader;
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.ArrayList;
+
+import Quiz1_Question.databinding.ActivityMainBinding;
 
 /*
 
@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
 
     static private final String TAG = "MainActivity";
 
+    ActivityMainBinding binding;
+
     // Declare a List of restaurants
     ArrayList<Restaurant> listOfRestaurants;
 
@@ -54,19 +56,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        // Find the view
-        descriptionTv = findViewById(R.id.description);
 
-        // When we click on btn_read_json, we call the readData
-        // and decode the results
-        Button btnJson = findViewById(R.id.btn_read_json);
-
-        // When the button is presssed, call readData
+        // When the button is pressed, call readData
         // With the results, populate the textview
         // Put on the TextView the names of the restaurants.
-        btnJson.setOnClickListener(v -> {
+        binding.btnReadJson.setOnClickListener(v -> {
             // Read the file
             listOfRestaurants = readData( "restaurants.json");
 
@@ -75,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             // desired result string:
             //      StringBuilder sb = new StringBuilder();
             // Add an item to a StringBuilder:
-            //      sb.append(resto.getName());
+            //      sb.append(item.getName());
             // Extract the string:
             //      sb.toString()
 
@@ -112,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
             }
         } catch (Exception e) {
             // Log the error
-            e.printStackTrace();
+           Log.e(TAG, "Error reading JSON file: " + e.getMessage());
         }
         return mylist;
     }

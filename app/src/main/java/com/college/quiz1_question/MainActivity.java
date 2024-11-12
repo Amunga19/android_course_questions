@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.TextView;
 import com.college.quiz1_question.util.MyFileReader;
 import org.json.JSONArray;
 import org.json.JSONObject;

@@ -22,5 +22,9 @@
     <!-- Message for textview in case of errors  -->
     <string name="computationError">Error</string>
     <string name="operation_result">Result</string>
+    <string name="try_again">Try again</string>
+    <string name="no_sir_jaribu_tena">No sir, jaribu tena</string>
+    <string name="poor_attempt_keep_trying">Poor attempt...keep trying</string>
+    <string name="no_sir_jaribu_tena_v2">No sir, jaribu tena</string>
 
 </resources>

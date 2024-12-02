@@ -29,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
 
         Button  addButton  = binding.addButton;
         TextView tvResult = binding.operationResult;
+        Button subButton = binding.subButton;
+        Button mulButton = binding.mulButton;
+        Button divButton = binding.divButton;
 
         addButton.setOnClickListener( (v) -> {
             EditText operandOne = binding.operandOneEdit;
@@ -46,6 +49,60 @@ public class MainActivity extends AppCompatActivity {
                 tvResult.setText(R.string.computationError);
             }
 
+        });
+
+        subButton.setOnClickListener(view -> {
+            EditText operandOne = binding.operandOneEdit;
+            EditText operandTwo  = binding.operandTwoEdit;
+
+            String firstNumber = operandOne.getText().toString();
+            String secondNumber = operandTwo.getText().toString();
+
+            try {
+                int num1 = Integer.parseInt(firstNumber);
+                int num2 = Integer.parseInt(secondNumber);
+
+                int total = num1 - num2;
+                tvResult.setText(String.format(Locale.CANADA, "%d", total));
+            }catch (NumberFormatException e){
+                tvResult.setText(R.string.try_again);
+            }
+        });
+
+        divButton.setOnClickListener(view -> {
+            EditText operandOne = binding.operandOneEdit;
+            EditText operandTwo  = binding.operandTwoEdit;
+
+            String firstNumber = operandOne.getText().toString();
+            String secondNumber = operandTwo.getText().toString();
+
+            try {
+                int num1 = Integer.parseInt(firstNumber);
+                int num2 = Integer.parseInt(secondNumber);
+
+                int total = num1 / num2;
+                tvResult.setText(String.format(Locale.CANADA, "%d", total));
+            }catch (NumberFormatException e){
+                tvResult.setText(R.string.no_sir_jaribu_tena_v2);
+            }
+        });
+
+        mulButton.setOnClickListener(view -> {
+            EditText operandOne = binding.operandOneEdit;
+            EditText operandTwo  = binding.operandTwoEdit;
+
+            String firstNumber = operandOne.getText().toString();
+            String secondNumber = operandTwo.getText().toString();
+
+            try {
+                int num1 = Integer.parseInt(firstNumber);
+                int num2 = Integer.parseInt(secondNumber);
+
+                int total = num1 * num2;
+                tvResult.setText(String.format(Locale.CANADA, "%d", total));
+            }catch (NumberFormatException e){
+                tvResult.setText(R.string.poor_attempt_keep_trying);
+            }
         });
     }
 

@@ -30,6 +30,9 @@ public class ThirdActivity extends AppCompatActivity {
                     return true;
                 case R.id.third_id:
                     return true;
+                case R.id.fourth_id:
+                    startActivity(new Intent(getApplicationContext(), FirstActivity.class));
+                    return true;
             }
             return false;
         });

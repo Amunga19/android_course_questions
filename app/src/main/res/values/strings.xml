@@ -12,4 +12,6 @@
     <string name="home">Home</string>
     <string name="second">Second</string>
     <string name="third">Third</string>
+    <string name="Fourth">Fourth</string>
+    <string name="Fourth_activity">Fourth Activity</string>
 </resources>

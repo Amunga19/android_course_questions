@@ -44,6 +44,9 @@ public class FirstActivity extends AppCompatActivity  {
                 case R.id.third_id:
                     startActivity(new Intent(getApplicationContext(), ThirdActivity.class));
                     return true;
+                case R.id.fourth_id:
+                    startActivity(new Intent(getApplicationContext(), FirstActivity.class));
+                    return true;
             }
             return false;
         });

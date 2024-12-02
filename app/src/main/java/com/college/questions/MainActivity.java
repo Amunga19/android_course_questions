@@ -6,6 +6,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.college.questions.databinding.ActivityMainBinding;
+
 import java.util.Locale;
 
 /*
@@ -15,18 +17,22 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity {
 
     static private final String TAG = "MainActivity";
+    private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        //setContentView(R.layout.activity_main);
 
-        Button  addButton  = findViewById(R.id.add_button);
-        TextView tvResult = findViewById(R.id.operation_result);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        Button  addButton  = binding.addButton;
+        TextView tvResult = binding.operationResult;
 
         addButton.setOnClickListener( (v) -> {
-            EditText operandOne = findViewById(R.id.operand_one_edit);
-            EditText operandTwo  = findViewById(R.id.operand_two_edit);
+            EditText operandOne = binding.operandOneEdit;
+            EditText operandTwo  = binding.operandTwoEdit;
 
             String firstNumber = operandOne.getText().toString();
             String secondNumber = operandTwo.getText().toString();

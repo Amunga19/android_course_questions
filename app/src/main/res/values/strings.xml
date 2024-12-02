@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Question - Calculator</string>
+    <string name="app_name" translatable="false">Question - Calculator</string>
 
     <!-- Hint for first operand EditText -->
     <string name="type_operand_one_hint">Type Operand 1</string>
@@ -22,5 +22,9 @@
     <!-- Message for textview in case of errors  -->
     <string name="computationError">Error</string>
     <string name="operation_result">Result</string>
+    <string name="congratulations_you_have_added_correctly">Congratulations, you have added correctly</string>
+    <string name="what_a_subtraction_genius">What a subtraction genius!</string>
+    <string name="great_score_divide_and_conquer">Great score! Divide and conquer</string>
+    <string name="great_multiplication_successful">Great, multiplication successful</string>
 
 </resources>

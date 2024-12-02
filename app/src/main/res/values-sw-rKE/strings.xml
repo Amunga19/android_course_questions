@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="type_operand_one_hint">Operandi ya 1</string>
+    <string name="type_operand_two_hint">Operandi ya 2</string>
+    <string name="add_operation_text">Ongeza</string>
+    <string name="sub_operation_text">Ondoa</string>
+    <string name="div_operation_text">Gawanya</string>
+    <string name="mul_operation_text">Zidisha</string>
+    <string name="computationError">Tashwishi</string>
+    <string name="operation_result">Matokeo</string>
+    <string name="congratulations_you_have_added_correctly">Hongera, umeongeza kwa usahihi</string>
+    <string name="what_a_subtraction_genius">Ni kipaji gani cha kutoa!</string>
+    <string name="great_score_divide_and_conquer">Alama nzuri! Kugawanya na kushinda</string>
+    <string name="great_multiplication_successful">Hongera, kuzidisha kumefaulu</string>
+</resources>

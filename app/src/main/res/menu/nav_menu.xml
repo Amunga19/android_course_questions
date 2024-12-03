@@ -12,4 +12,14 @@
             android:icon="@android:drawable/checkbox_on_background"
             android:title="@string/outbox" />
 
+        <item
+            android:id="@+id/helpFragment"
+            android:icon="@drawable/help_icon"
+            android:title="@string/help_menu"/>
+
+        <item
+                android:id="@+id/catFragment"
+                android:icon="@drawable/cat_icon"
+                android:title="@string/cat_fragment"/>
+
 </menu>

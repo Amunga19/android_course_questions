@@ -16,7 +16,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
  It has a Bottom Navigation to move between the fragments.
 
- We have : InboxFragment, OutBoxFragent and HelpFragment
+ We have : InboxFragment, OutBoxFragment and HelpFragment
 
  TODO 1:
  Bottom Navigation currently contains Inbox and Outbox menu items.

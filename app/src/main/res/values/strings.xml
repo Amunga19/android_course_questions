@@ -6,5 +6,7 @@
     <string name="inbox_fragment">Inbox fragment</string>
     <string name="outbox_fragment">Outbox fragment</string>
     <string name="help_fragment">Help fragment</string>
+    <string name="help_menu">Help</string>
+    <string name="cat_fragment">Cat Fragment</string>
 
 </resources>
